@@ -1,0 +1,177 @@
+@import "./base/reset";
+@import "./mixin/mixin";
+@import "./common.scss";
+
+// -------Contactページ--------
+
+.contact-fv {
+    height: 80vh;
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #222;
+        width: 50%;
+        height: 80%;
+        z-index: -1;
+    }
+    
+    &__wrapper {
+        height: 66%;
+        width: 80%;
+        background-image: url(../img/contactfv.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding-bottom: 166px;
+        &::after {
+            content: "";
+            background-color: rgba(0, 0, 0, .1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom:0;
+        }
+    }
+    &__inner {
+        position: absolute;
+        top: 50%;
+        right: -20%;
+        transform: translate(0, -50%);
+        color: #fff;
+        z-index: 1;
+        @include xl {
+            right: -10%;
+        }
+        
+    }
+    &__title {
+        font-size: 5.6rem;
+        line-height: 86px;
+        @include xl {
+            font-size: 7.2rem;
+            line-height: 86px;
+        }
+    }
+    &__tagline {
+        font-size: 1.6rem;
+        font-family: Montserrat Medium;
+        @include xl {
+            font-size: 2rem;
+        }
+    }
+}
+
+.contact-about {
+    margin-bottom: 80px;
+    span {
+        background-color: #333;
+        color: #fff;
+        margin-left: 10px;
+        font-weight: normal;
+        padding: 3px 5px;
+    }
+    .container {
+        @include md {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    }
+    &__description {
+        font-size: 1.4rem;
+        line-height: 24px;
+        margin-bottom: 50px;
+        @include md {
+            font-size: 1.6rem;
+        }
+    }
+    // 共通
+    dt {
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    input {
+        border: 1px solid #333;
+    }
+
+    &__type {
+        
+        dd {
+            font-size: 1.6rem;
+            font-family: Noto Sans JP;
+            @include md {
+                float: left;
+                margin-top: 20px;
+                
+            }
+        }
+        input {
+            vertical-align: middle;
+            text-indent: 1em;
+            margin-right: 14px;
+            @include md {
+                vertical-align: inherit;
+            }
+        }
+    }
+    
+    &__text {
+        dt {
+            padding-top: 40px;
+            margin-bottom: 10px;
+            clear: both;
+        }
+        input {
+            width: 100%;
+            height: 48px;
+        }
+        textarea {
+            width: 100%;
+            height: 210px;
+            border: 1px solid #333;
+        }
+    }
+    &__policy {
+        
+        
+        dt {
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        &__item1 {
+            width: 100%;
+            height: 216px;
+            border: 1px solid #333;
+            padding-top: 10px;
+            padding-left: 10px;
+            overflow-x: scroll;
+            font-size: 1.4rem;
+            font-family: 游ゴシック体;
+        }
+        &__item2 {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-size: 1.4rem;
+            @include md {
+                font-size: 1.6rem;
+            }
+            @include xl {
+                text-align: center;
+            }
+            input {
+                vertical-align: middle;
+                text-indent: 1em;
+                margin-right: 14px;
+            }
+        }
+    }
+    &__btn {
+        @include more-btn;
+        margin: 0 auto;
+    }
+
+}

@@ -1,0 +1,43 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1440px;
+
+
+@mixin sm {
+  @media (min-width: ($sm)) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: ($md)) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: ($lg)) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: ($xl)) {
+    @content;
+  }
+}
+
+@mixin fontBlue {
+  color: #51a2bc;
+}
+
+// btn
+@mixin more-btn {
+  display: block;
+  width: 160px;
+  font-size: 1.1rem;
+  font-family: Montserrat Medium;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  margin-top: 30px;
+}

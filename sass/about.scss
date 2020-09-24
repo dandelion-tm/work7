@@ -1,0 +1,210 @@
+@import "./base/reset";
+@import "./mixin/mixin";
+@import "./common.scss";
+
+
+// -------aboutUsページ--------
+
+.aboutUs-fv {
+    height: 80vh;
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #222;
+        width: 50%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    &__wrapper {
+        height: 86%;
+        width: 76%;
+        background-image: url(../img/aboutfv.jpg);
+        background-size: cover;
+        background-position: center 0;
+        position: relative;
+        padding-bottom: 166px;
+        &::after {
+            content: "";
+            background-color: rgba(0, 0, 0, .1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom:0;
+        }
+    }
+    &__inner {
+        position: absolute;
+        top: 50%;
+        right: -20%;
+        transform: translate(0, -50%);
+        color: #fff;
+        z-index: 1;
+        
+    }
+    &__title {
+        font-size: 5.6rem;
+        line-height: 86px;
+        @include xl {
+            font-size: 7.2rem;
+            line-height: 86px;
+        }
+    }
+    &__tagline {
+        font-size: 1.6rem;
+        line-height: 283px;
+        font-family: Montserrat Medium;
+        @include xl {
+            font-size: 2rem;
+        }
+    }
+}
+
+.vision {
+    .container {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        @include md {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 415px;
+        }
+        @include xl {
+            margin-bottom: 120px;
+        }
+    }
+    &__subtitle {
+        font-size: 2rem;
+        font-family: Noto Sans JP Bold;
+        margin-bottom: 35px;
+    }
+    &__text {
+        font-size: 1.4rem;
+        .bs:not(:last-child) {
+            margin-bottom: 2em;
+        }
+    }
+}
+
+.message {
+    &__wrapper {
+        position: relative;
+        padding-top: 150px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 80px;
+        @include md {
+            padding-right: 30px;
+        }
+        @include xl {
+            max-width: 1100px;
+            margin: 0 auto;
+            margin-bottom: 120px;
+        }
+    }
+    &__content {
+        width: 100%;
+        max-width: 100%;
+        padding: 120px 0 60px;
+        background-color: #f0f0f0;
+        margin-left: auto;
+        @include md {
+            width: 840px;
+            max-width: 70%;
+        }
+        @include xl {
+            padding-bottom: 90px;
+        }
+        &__inner {
+            max-width: 400px;
+            padding: 0 30px;
+            margin: 0 auto;
+        }
+    }
+    &__img {
+        max-width: 90%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include md {
+            width: 36.4%;
+            left: 30px;
+        }
+        img {
+            height: 230px;
+            object-fit: cover;
+            @include md {
+                height: inherit;
+            }
+        }
+    }
+    &__description {
+        font-size: 1.4rem;
+        @include md {
+            font-size: 1.6rem;
+        }
+        .bs:not(:last-child) {
+            margin-bottom: 2em;
+        }
+    }
+}
+
+.company {
+    .container {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    dl {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.4rem;
+        font-family: Noto Sans JP Bold;
+        margin-bottom: 40px;
+        @include md {
+            font-size: 1.6rem;
+        }
+    }
+    dt {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        width: 50%;
+        padding-top: 24px;
+        padding-bottom: 22px;
+        @include md {
+            width: 30%;
+            @include md {
+                font-weight: bold;
+            }
+        }
+    }
+    dd {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        width: 50%;
+        padding-top: 24px;
+        @include md {
+            width: 70%;
+        }
+    }
+    &__map {
+        padding-right: 30px;
+        padding-left: 30px;
+        width: 100%;
+        margin-bottom: 80px;
+        @include xl {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        img {
+            @include md {
+                height: 230px;
+            }
+        }
+    }
+}
